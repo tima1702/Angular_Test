@@ -1,0 +1,70 @@
+.landing-page {
+  width: 100%;
+  mat-toolbar{
+    mat-toolbar-row{
+      display: flex;
+      justify-content: space-between;
+      .logout-button{
+        margin-left: 10px;
+      }
+      button{
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+
+
+  .carousel.slide{
+    background-color: #45515b;
+    outline: none;
+    padding: 75px 0;
+    .slide-container{
+
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .mat-card{
+      img{
+        width: 240px !important;
+        height: 140px;
+      }
+      margin: 0 6px;
+      width: 250px !important;
+    }
+  }
+
+  mat-card{
+    mat-card-content{
+      .card-category{
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #8c2b0b;
+        font-size: 13px;
+        letter-spacing: 2px;
+      }
+      .card-title{
+        font-weight: bold;
+        font-size: 17px;
+        font-family: Arial, sans-serif;
+      }
+      .card-price{
+        text-transform: uppercase;
+        font-weight: lighter;
+        color: #45515b;
+        font-size: 13px;
+        font-family: Arial, sans-serif;
+      }
+    }
+    mat-card-actions{
+      display: flex;
+      justify-content: center;
+      .remove-article{
+        background-color: #b5372e;
+        color: white;
+      }
+    }
+  }
+}

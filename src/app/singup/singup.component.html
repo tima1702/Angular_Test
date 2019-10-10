@@ -1,0 +1,45 @@
+<form class="example-form" [formGroup]="signInGroup" (ngSubmit)="onSubmit()">
+  <div class="welcomeText">Sign Up for Free</div>
+  <div>
+    <mat-form-field class="logInFirstName">
+      <mat-label>
+        First Name
+        <span class="required-marker">*</span>
+      </mat-label>
+      <input matInput autocomplete="off" type="text" [formControl]="firstName">
+      <mat-error *ngIf="firstName.invalid">{{getErrorMessageFirstName()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field class="logInLastName">
+      <mat-label>
+        Last Name
+        <span class="required-marker">*</span>
+      </mat-label>
+      <input matInput autocomplete="off" type="text" [formControl]="lastName">
+      <mat-error *ngIf="lastName.invalid">{{getErrorMessageLastName()}}</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>
+        Enter your email
+        <span class="required-marker">*</span>
+      </mat-label>
+      <input matInput autocomplete="off" class="test" type="text" [formControl]="email">
+      <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="signInPassword">
+      <mat-label>
+        Enter your password
+        <span class="required-marker">*</span>
+      </mat-label>
+      <input matInput autocomplete="off" [type]="hide ? 'password' : 'text'" [formControl]="password">
+      <button mat-icon-button matSuffix class="eyeButton" (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
+    </mat-form-field>
+  </div>
+  <button type="submit" class="signUpButton" md-raised-button>GET STARTED</button>
+</form>

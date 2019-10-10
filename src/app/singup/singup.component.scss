@@ -1,0 +1,77 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+matSuffix{
+  &:active{
+    border-style: none;
+    border-color: white !important;
+  }
+}
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+.welcomeText {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  user-select: none;
+}
+:host ::ng-deep .mat-form-field-infix {
+  color: white;
+  width: 500px;
+}
+.signInPassword {
+  width: 500px;
+}
+.eyeButton {
+  border: none transparent;
+  background-color: transparent;
+  color: white;
+}
+.signUpButton {
+  width: 500px;
+  background-color: #34ae88;
+  border: none;
+  padding: 10px;
+  font-size: 26px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 4px;
+  &:hover{
+    transition: background-color 500ms linear;
+    background-color: #2c9878;
+  }
+}
+.logInFirstName {
+  width: 240px;
+  margin-right: 10px;
+}
+.logInLastName {
+  width: 240px;
+  margin-left: 10px;
+}
+mat-label{
+  color: white;
+}
+button:focus{
+  outline: none;
+}
+.required-marker{
+  color: #33ad87;
+}

@@ -1,0 +1,28 @@
+<form class="example-form" [formGroup]="signUpGroup" (ngSubmit)="onSubmit()">
+  <div class="welcomeText">Welcome Back!</div>
+  <div>
+    <mat-form-field>
+      <mat-label>
+        Enter your email
+        <span class="required-marker">*</span>
+      </mat-label>
+      <input matInput autocomplete="off" type="text" [formControl]="email">
+      <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="signUpPassword">
+      <mat-label>
+        Enter your password
+        <span class="required-marker">*</span>
+      </mat-label>
+      <input matInput autocomplete="off" [type]="hide ? 'password' : 'text'" [formControl]="password">
+      <button mat-icon-button matSuffix class="eyeButton" (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
+    </mat-form-field>
+  </div>
+  <button type="submit" class="signUpButton" md-raised-button>LOG IN</button>
+</form>

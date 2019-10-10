@@ -1,0 +1,18 @@
+<div class="login-page">
+  <div class="login-page__container">
+    <mat-radio-group (change)="onChange($event)" name="gender">
+      <mat-radio-button class="button-signin" [ngClass]="{'active' : signIn}" value="1" checked>Sign Up
+      </mat-radio-button>
+      <mat-radio-button class="button-signup" [ngClass]="{'active' : !signIn}" value="2">Log In</mat-radio-button>
+    </mat-radio-group>
+
+    <div class="login-page__container__form-container" *ngIf="signIn; else signUpBlock">
+      <app-singup></app-singup>
+    </div>
+    <ng-template #signUpBlock>
+      <div class="login-page__container__form-container">
+        <app-singin></app-singin>
+      </div>
+    </ng-template>
+  </div>
+</div>

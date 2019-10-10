@@ -1,0 +1,64 @@
+.login-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+
+  &__container {
+    background-color: #25313e;
+    height: fit-content;
+    padding: 50px;
+    width: 500px;
+    margin-top: 50px;
+    border-radius: 5px;
+    animation: fadeInFromNone 0.5s ease-out;
+
+    &__form-container{
+      animation: fadeInFromNone 0.5s ease-out;
+    }
+
+    .active {
+      background-color: #33ad87!important;
+    }
+    .button-signin, .button-signup {
+      background-color: #45515b;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      width: 50%;
+      color: white;
+      transition: background-color 500ms linear;
+      &:hover{
+        transition: background-color 500ms linear;
+        background-color: #2c9878;
+      }
+    }
+  }
+}
+
+:host ::ng-deep .mat-radio-button {
+  .mat-radio-container {
+    display: none !important;
+  }
+  .mat-radio-label-content {
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+  }
+}
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,143 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<div class="landing-page">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Custom Toolbar</span>
+      <div class="button-container">
+        <button mat-stroked-button *ngIf="role">Added Article</button>
+        <button class="logout-button" mat-stroked-button (click)="logout()">Logout</button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <div class="slide-container">
+        <mat-card class="example-card">
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+               alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <div class="card-category">shopping</div>
+            <div class="card-title">Explore French brands and designers!</div>
+            <div class="card-price">$90 per person</div>
+            <div class="card-rating">start</div>
+          </mat-card-content>
+          <mat-card-actions *ngIf="role">
+            <button mat-button class="remove-article">Delete Article</button>
+          </mat-card-actions>
+        </mat-card>
+        <mat-card class="example-card">
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+               alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <div class="card-category">shopping</div>
+            <div class="card-title">Explore French brands and designers!</div>
+            <div class="card-price">$90 per person</div>
+            <div class="card-rating">start</div>
+          </mat-card-content>
+          <mat-card-actions *ngIf="role">
+            <button mat-button class="remove-article">Delete Article</button>
+          </mat-card-actions>
+        </mat-card>
+        <mat-card class="example-card">
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+               alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <div class="card-category">shopping</div>
+            <div class="card-title">Explore French brands and designers!</div>
+            <div class="card-price">$90 per person</div>
+            <div class="card-rating">start</div>
+          </mat-card-content>
+          <mat-card-actions *ngIf="role">
+            <button mat-button class="remove-article">Delete Article</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="slide-container">
+        <mat-card class="example-card">
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+               alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <div class="card-category">shopping</div>
+            <div class="card-title">Explore French brands and designers!</div>
+            <div class="card-price">$90 per person</div>
+            <div class="card-rating">start</div>
+          </mat-card-content>
+          <mat-card-actions *ngIf="role">
+            <button mat-button class="remove-article">Delete Article</button>
+          </mat-card-actions>
+        </mat-card>
+        <mat-card class="example-card">
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+               alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <div class="card-category">shopping</div>
+            <div class="card-title">Explore French brands and designers!</div>
+            <div class="card-price">$90 per person</div>
+            <div class="card-rating">start</div>
+          </mat-card-content>
+          <mat-card-actions *ngIf="role">
+            <button mat-button class="remove-article">Delete Article</button>
+          </mat-card-actions>
+        </mat-card>
+        <mat-card class="example-card">
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+               alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <div class="card-category">shopping</div>
+            <div class="card-title">Explore French brands and designers!</div>
+            <div class="card-price">$90 per person</div>
+            <div class="card-rating">start</div>
+          </mat-card-content>
+          <mat-card-actions *ngIf="role">
+            <button mat-button class="remove-article">Delete Article</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="slide-container">
+        <mat-card class="example-card">
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+               alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <div class="card-category">shopping</div>
+            <div class="card-title">Explore French brands and designers!</div>
+            <div class="card-price">$90 per person</div>
+            <div class="card-rating">start</div>
+          </mat-card-content>
+          <mat-card-actions *ngIf="role">
+            <button mat-button class="remove-article">Delete Article</button>
+          </mat-card-actions>
+        </mat-card>
+        <mat-card class="example-card">
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+               alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <div class="card-category">shopping</div>
+            <div class="card-title">Explore French brands and designers!</div>
+            <div class="card-price">$90 per person</div>
+            <div class="card-rating">start</div>
+          </mat-card-content>
+          <mat-card-actions *ngIf="role">
+            <button mat-button class="remove-article">Delete Article</button>
+          </mat-card-actions>
+        </mat-card>
+        <mat-card class="example-card">
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba1.jpg"
+               alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <div class="card-category">shopping</div>
+            <div class="card-title">Explore French brands and designers!</div>
+            <div class="card-price">$90 per person</div>
+            <div class="card-rating">start</div>
+          </mat-card-content>
+          <mat-card-actions *ngIf="role">
+            <button mat-button class="remove-article">Delete Article</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
